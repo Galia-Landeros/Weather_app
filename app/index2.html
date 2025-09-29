@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eolo - Pixel App</title>
+
+
+  <link href="https://fonts.cdnfonts.com/css/press-start-2p" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .phone-frame {
+      width: 375px;
+      height: 667px;
+
+      
+      background-image: url('cielo2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      border: 8px solid #ffffff;  
+      border-radius: 25px;
+      overflow: hidden;
+
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: rgba(0, 64, 128, 0.85);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .app {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0.85); 
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    header img {
+      width: 60px;
+      margin-top: 10px;
+    }
+
+    .sub {
+      text-align: center;
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+
+    .search-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    select, input[type="date"] {
+      padding: 5px;
+      font-family: inherit;
+      font-size: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 10px;
+    }
+
+    .bottom-bar {
+      background: rgba(0, 64, 128, 0.85);
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+    }
+
+    .icon, .bottom-bar button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .bottom-bar button {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame">
+    <div class="header">Eolo App</div>
+
+    <div class="app">
+      <header>
+        <h1>Eolo</h1>
+       
+         <img src="mascota.png" alt="Sol pixel">
+      </header>
+      <p class="sub">Mantente al día</p>
+
+      <div class="search-box">
+        <input id="fecha" type="date">
+        <select>
+          <option selected disabled>Buscar país (México)</option>
+          <option>Aguascalientes</option>
+          <option>Baja California</option>
+         <option>Baja California Sur</option>
+        <option>Campeche</option>
+        <option>Chiapas</option>
+        <option>Chihuahua</option>
+        <option>Ciudad de México</option>
+        <option>Coahuila</option>
+        <option>Colima</option>
+        <option>Durango</option>
+        <option>Estado de México</option>
+        <option>Guanajuato</option>
+        <option>Guerrero</option>
+        <option>Hidalgo</option>
+        <option>Jalisco</option>
+        <option>Michoacán</option>
+        <option>Morelos</option>
+        <option>Nayarit</option>
+        <option>Nuevo León</option>
+        <option>Oaxaca</option>
+        <option>Puebla</option>
+        <option>Querétaro</option>
+        <option>Quintana Roo</option>
+        <option>San Luis Potosí</option>
+        <option>Sinaloa</option>
+        <option>Sonora</option>
+        <option>Tabasco</option>
+        <option>Tamaulipas</option>
+        <option>Tlaxcala</option>
+        <option>Veracruz</option>
+        <option>Yucatán</option>
+          <option>Zacatecas</option>
+        </select>
+      </div>
+
+      <div class="grid">
+        <div class="card">Humedad</div>
+        <div class="card">Viento</div>
+        <div class="card">Presión</div>
+        <div class="card">UV</div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <i class="fa-solid fa-house icon"></i>
+      <button>+</button>
+      <i class="fa-solid fa-user icon"></i>
+    </div>
+  </div>
+
+</body>
+</html>
